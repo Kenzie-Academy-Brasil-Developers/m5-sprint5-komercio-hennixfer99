@@ -1,14 +1,14 @@
 from rest_framework import serializers
 from products.models import Products
 from accounts.ModelSerializers import AccountsDetails
-import ipdb
+
 
 class ProductSerializer(serializers.ModelSerializer):
 
     
     class Meta():
         model = Products
-        fields = ['description','price','quantity','is_active','seller_id']
+        fields = ['id','description','price','quantity','is_active','seller_id']
 
 class ProductSerializerOwner(serializers.ModelSerializer):
 

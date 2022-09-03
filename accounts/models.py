@@ -4,7 +4,7 @@ import uuid
 
 class Accounts(AbstractUser):
     id = models.UUIDField(primary_key= True, editable = False, default = uuid.uuid4, unique= True)
-    username = models.TextField(unique = True)
+    username = models.CharField(max_length=100, unique = True)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     is_seller = models.BooleanField(default=False, blank=True, null = False)

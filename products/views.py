@@ -25,7 +25,7 @@ class ProductView(ProductMixinSerializer,generics.ListCreateAPIView):
 class ProductDetailView(ProductMixinSerializer, generics.RetrieveUpdateAPIView):
 
     authentication_classes = [TokenAuthentication]
-    permission_classes = [SellerOwnerOrNotSeller, IsAuthenticatedOrReadOnly]
+    permission_classes = [IsAuthenticatedOrReadOnly, SellerOwnerOrNotSeller]
     
     queryset = Products.objects.all()
     serializer_map = {
