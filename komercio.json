@@ -1,0 +1,20 @@
+[
+    {
+  "model": "accounts.Accounts",
+  "pk": "f441d5fa-d8f3-40af-935b-6a2f62ae8fcf", 
+  "fields": {"password": "Wm79cfa$YB8kMl5actF+5L8mC94IuO/NRDsgpgNE+90PMvaZQSw=",
+  "last_login": null, 
+  "is_superuser": false, 
+  "email": "", 
+  "is_staff": false, 
+  "is_active": true, 
+  "date_joined": "2022-09-03T16:20:01.290681Z", 
+  "username": "Hennix", 
+  "first_name": "Henrique", 
+  "last_name": "Ferreira", 
+  "is_seller": true, 
+  "groups": [], 
+  "user_permissions": []
+  }
+  }
+]
