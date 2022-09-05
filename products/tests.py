@@ -60,7 +60,7 @@ class ProductsViewsTest(APITestCase):
                         "price": 100.99,
                         "quantity": 15}
         response = self.client.post('/api/products/', product_info)
-        expected_response = {"detail": "You do not have permission to create a product."}
+        expected_response = {"detail": "You do not have permission to perform this action."}
         self.assertEqual(response.status_code, 403)
         self.assertEqual(response.json(), expected_response)
 

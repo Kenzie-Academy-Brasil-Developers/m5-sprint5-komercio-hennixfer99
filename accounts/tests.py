@@ -1,3 +1,4 @@
+from email.policy import HTTP
 from django.test import TestCase
 from rest_framework.test import APITestCase
 from accounts.models import Accounts
@@ -69,6 +70,8 @@ class UsersViewsTest(APITestCase):
     def test_update_user_is_active_status_without_permission(self):
         self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.seller_token.key)
         response = self.client.patch('/api/accounts/2/management/', {"is_active": False})
-        expected_response = {"detail": "You do not have permission to change is_active."}
+        expected_response = {"detail": "You do not have permission to perform this action."}
         self.assertEqual(response.status_code, 403)
         self.assertEqual(response.json(), expected_response)
+
+ 
