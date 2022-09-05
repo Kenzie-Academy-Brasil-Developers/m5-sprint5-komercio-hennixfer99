@@ -108,7 +108,7 @@ if DATABASE_URL:
         default=DATABASE_URL, conn_max_age=500, ssl_require=True)
     DATABASES['default'].update(db_from_env)
     DEBUG = True
-ALLOWED_HOSTS = ['komercio-generic-view-henrique.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['komercio-generic-view-henrique.herokuapp.com','localhost','127.0.0.1']
 
 
 # Password validation
