@@ -6,7 +6,7 @@ from products.models import Products
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from .permissions import SellerOrNotSellerPerm, SellerOwnerOrNotSeller
-import ipdb
+
 
 class ProductView(ProductMixinSerializer,generics.ListCreateAPIView):
    

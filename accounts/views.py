@@ -2,11 +2,11 @@ from rest_framework.views import APIView, Response, status
 from accounts.ModelSerializers import LoginSerializer
 from rest_framework.authtoken.models import Token
 from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from django.contrib.auth import authenticate
 from .ModelSerializers import AccountSerializer
 from .models import Accounts
 from rest_framework import generics
-from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from accounts.permissions import OwnerPerm
 
 class LoginView(APIView):
